@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Logowanie — Dziennik POLLUB</title>
+</head>
+<body>
+  <h1>Logowanie</h1>
+  <form id="loginForm">
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Hasło: <input type="password" name="password" required></label><br>
+    <button type="submit">Zaloguj</button>
+  </form>
+  <div id="msg"></div>
+  <script src="auth.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const f = e.target;
+      const data = { email: f.email.value, password: f.password.value };
+      const res = await login(data);
+      const msg = document.getElementById('msg');
+      if (res.error) msg.textContent = 'Błąd: ' + res.error;
+      else {
+        msg.textContent = 'Zalogowano!';
+        // redirect or update UI
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rejestracja — Dziennik POLLUB</title>
+</head>
+<body>
+  <h1>Rejestracja</h1>
+  <form id="regForm">
+    <label>Imię: <input type="text" name="name"></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Hasło: <input type="password" name="password" required></label><br>
+    <button type="submit">Zarejestruj</button>
+  </form>
+  <div id="msg"></div>
+  <script src="auth.js"></script>
+  <script>
+    document.getElementById('regForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const f = e.target;
+      const data = { name: f.name.value, email: f.email.value, password: f.password.value };
+      const res = await register(data);
+      const msg = document.getElementById('msg');
+      if (res.error) msg.textContent = 'Błąd: ' + res.error;
+      else {
+        msg.textContent = 'Zarejestrowano i zalogowano!';
+      }
+    });
+  </script>
+</body>
+</html>
