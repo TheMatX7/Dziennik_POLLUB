@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dziennik Studenta - Politechnika Lubelska</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📘 Dziennik Studenta</h1>
+    <nav>
+      <ul>
+        <li><a href="#obecnosc">Obecność</a></li>
+        <li><a href="#tematy">Tematy</a></li>
+        <li><a href="#oceny">Oceny</a></li>
+        <li><a href="#terminy">Terminy</a></li>
+        <li><a href="#nauczyciele">Nauczyciele</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="obecnosc" class="card">
+      <h2>📋 Lista obecności</h2>
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>04.11.2025</td><td class="ok">Obecny</td></tr>
+          <tr><td>05.11.2025</td><td class="no">Nieobecny</td></tr>
+          <tr><td>06.11.2025</td><td class="ok">Obecny</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="tematy" class="card">
+      <h2>📚 Tematy zajęć</h2>
+      <ul>
+        <li><strong>04.11:</strong> Wprowadzenie do HTML</li>
+        <li><strong>05.11:</strong> Stylizacja stron w CSS</li>
+        <li><strong>06.11:</strong> Podstawy JavaScriptu</li>
+      </ul>
+    </section>
+
+    <section id="oceny" class="card">
+      <h2>🧮 Oceny</h2>
+      <ul>
+        <li>Kolokwium 1 – <span class="grade good">4.0</span></li>
+        <li>Projekt – <span class="grade excel">5.0</span></li>
+        <li>Sprawozdanie – <span class="grade avg">3.5</span></li>
+      </ul>
+    </section>
+
+    <section id="terminy" class="card">
+      <h2>📅 Terminy</h2>
+      <ul>
+        <li>Kolokwium 1 – 15.11.2025</li>
+        <li>Zaliczenie projektu – 30.11.2025</li>
+        <li>Sprawozdanie – 10.12.2025</li>
+      </ul>
+    </section>
+
+    <section id="nauczyciele" class="card">
+      <h2>👨‍🏫 Dane nauczycieli</h2>
+      <ul>
+        <li>dr inż. Jan Kowalski – <a href="mailto:kowalski@pollub.edu.pl">kowalski@pollub.edu.pl</a></li>
+        <li>mgr Anna Nowak – <a href="mailto:nowak@pollub.edu.pl">nowak@pollub.edu.pl</a></li>
+        <li>dr hab. Piotr Wiśniewski – <a href="mailto:wisniewski@pollub.edu.pl">wisniewski@pollub.edu.pl</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Politechnika Lubelska – Dziennik Studenta (wersja pokazowa)</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
